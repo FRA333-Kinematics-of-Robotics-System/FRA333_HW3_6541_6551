@@ -64,7 +64,7 @@ def computeEffortHW3(q:list[float], w:list[float])->list[float]:
 
     J_Trans = np.transpose(J)
     
-    tau = J_Trans @ w
+    tau = -J_Trans @ w
     
     return tau
 #==============================================================================================================#

@@ -79,7 +79,7 @@ def CheackEffort(q:list[float], w:list[float])->list[float]:
 
     #วิธีที่ 2 หา tau จากสูตร τ=JT⋅w
     j_Trans = np.transpose(j) # Transpose jacobian
-    tau = j_Trans @ w  # หาค่า tau
+    tau = -j_Trans @ w  # หาค่า tau
     return(tau,effort_robotics_toolbox)
 
 #ค่า tau จากทั้ง 2 วิธีอาจตรงข้ามกัน (สลับ + -) เนื่องจากมีการ reference frame ที่ต่างกัน

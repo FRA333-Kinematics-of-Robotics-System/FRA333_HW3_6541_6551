@@ -54,7 +54,12 @@ DHRobot: 3DOF_Robot, 3 joints (RRR), dynamics, modified DH parameters
     - **Description**: 
         - This function calculates the Jacobian matrix for the robot based on its current configuration. It uses the forward kinematics results to compute the linear and angular velocity components.
 
-    - **Jacobian Formula**:
+    - **Jacobian Matrix Calculation**:
+
+        The Jacobian matrix $J$ can be expressed as:
+
+## $$J=\begin{bmatrix}J_v\cr J_w\end{bmatrix}$$
+
 
 2. **`checkSingularityHW3(q: list[float]) -> bool`**
 

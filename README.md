@@ -64,9 +64,9 @@ Where:
 - $J_v$ is the linear velocity matrix of size 3xN.
 - $J_w$ is the angular velocity matrix of size 3xN.
 
-$$ J_v\begin{bmatrix} :3 , i \end{bmatrix} = (Z_i \times (p_e - p_i)) \times R_e  $$
+$$ J_v\begin{bmatrix} :3 , i \end{bmatrix} = (Z_i \times (p_e - p_i))R_e  $$
 
-$$ J_w\begin{bmatrix} 3: , i \end{bmatrix} = Z_i \times R_e$$
+$$ J_w\begin{bmatrix} 3: , i \end{bmatrix} = Z_i R_e$$
 
 Where:
 - $R_e$ is rotation matrix from base to end effector.

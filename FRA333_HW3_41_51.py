@@ -9,7 +9,6 @@ import numpy as np
 ชื่อ_รหัส(ex: ธนวัฒน์_6541)                                                        
 1. พบเพชร_6541
 2. วัสยศ_6551
-3.
 '''
 
 q_initial = np.array([0.0, 0.0, 0.0])
@@ -69,7 +68,3 @@ def computeEffortHW3(q:list[float], w:list[float])->list[float]:
     
     return tau
 #==============================================================================================================#
-
-print(endEffectorJacobianHW3(q_initial))
-print(checkSingularityHW3(q_singularity))
-print(computeEffortHW3(q_initial, w_initial))

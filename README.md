@@ -60,9 +60,18 @@ DHRobot: 3DOF_Robot, 3 joints (RRR), dynamics, modified DH parameters
 
 $$ J = \begin{bmatrix} J_v \\\ J_w \end{bmatrix} $$
 
-    Where:
-    - $J_v$ is the linear velocity matrix of size 3xN
-    - $J_w$ is the angular velocity matrix of size 3xN.
+Where:
+- $J_v$ is the linear velocity matrix of size 3xN.
+- $J_w$ is the angular velocity matrix of size 3xN.
+
+$$ J_v\begin{bmatrix} :3 , i \end{bmatrix} = (Z_i \times (p_e - p_i)) \times R_e  $$
+
+$$ J_w\begin{bmatrix} 3: , i \end{bmatrix} = Z_i \times R_e$$
+
+Where:
+- $R_e$ is rotation matrix from base to end effector.
+- $Z_i$ is the vector representing the direction of rotation of joint $i$.
+- $p_e - p_i$ is the vector pointing from joint $i$ to the position of the end-effector.
 
 2. **`checkSingularityHW3(q: list[float]) -> bool`**
 
@@ -77,15 +86,13 @@ $$ J = \begin{bmatrix} J_v \\\ J_w \end{bmatrix} $$
     - **Singularity Calculation**:
 
         To find singularities in a robot's motion using the Jacobian, we use this following relationship.
-
-        <h3 align="center">
-          || det (J<sup>*</sup>(q)) || &lt; &epsilon;
-        </h3>
         
-        Where:
-        - $J^*$ is the **Jacobian** matrix of the robot that already **reduce**.
-        - $q$ is the list of joint angles representing the robot's configuration.
-        - $\epsilon$ is the **small threshold value** that helps determine whether the robot is in or near a singular configuration.
+$$||\ det(J^*(q))\ ||\ < \ \epsilon $$
+
+Where:
+- $J^*$ is the **Jacobian** matrix of the robot that already **reduce**.
+- $q$ is the list of joint angles representing the robot's configuration.
+- $\epsilon$ is the **small threshold value** that helps determine whether the robot is in or near a singular configuration.
 
 3. **`computeEffortHW3(q: list[float], w: list[float]) -> list[float]`**
 
@@ -102,14 +109,12 @@ $$ J = \begin{bmatrix} J_v \\\ J_w \end{bmatrix} $$
 
         To compute the effort (joint torques or forces) for a 3 DOF robot using the Jacobian, we use this following relationship.
 
-        <h3 align="center">
-          &tau; = J^T &times; w
-        </h3>
+$$\tau\ =\ J^T \times w$$
 
-        Where:
-        - $\tau$ is the vector of joint torques (effort).
-        - $J$ is the **Jacobian** matrix of the robot.
-        - $w$ is the **wrench** (forces and torques) applied at the end-effector.
+Where:
+- $\tau$ is the vector of joint torques (effort).
+- $J$ is the **Jacobian** matrix of the robot.
+- $w$ is the **wrench** (forces and torques) applied at the end-effector.
 
 ### Sample Usage
 

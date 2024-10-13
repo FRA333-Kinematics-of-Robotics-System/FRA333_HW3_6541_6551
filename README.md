@@ -69,8 +69,10 @@ DHRobot: 3DOF_Robot, 3 joints (RRR), dynamics, modified DH parameters
 
         To find singularities in a robot's motion using the Jacobian, we use this following relationship.
 
-        ### $$||\ det(J^*(q))\ ||\ < \ \epsilon $$
-
+        <h3 align="center">
+          || det (J<sup>*</sup>(q)) || &lt; &epsilon;
+        </h3>
+        
         Where:
         - $J^*$ is the **Jacobian** matrix of the robot that already **reduce**.
         - $q$ is the list of joint angles representing the robot's configuration.
@@ -91,7 +93,9 @@ DHRobot: 3DOF_Robot, 3 joints (RRR), dynamics, modified DH parameters
 
         To compute the effort (joint torques or forces) for a 3 DOF robot using the Jacobian, we use this following relationship.
 
-        ### $$\tau\ =\ J^T \times w$$
+        <h3 align="center">
+          &tau; = J^T &times; w
+        </h3>
 
         Where:
         - $\tau$ is the vector of joint torques (effort).
@@ -134,6 +138,8 @@ print(computeEffortHW3(q_initial, w))
 
 The provided `testScript.py` verifies the correctness of the manually calculated Jacobian, singularity check, and effort computation using **Robotics Toolbox for Python**.
 ### Robot's MDH Parameters Define for **Robotics Toolbox**
+
+![robottoolbox](all_dim_robot.png)
 
 ```python
 #This parameters from HW3_utils.py file.

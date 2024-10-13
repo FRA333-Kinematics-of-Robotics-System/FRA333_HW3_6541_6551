@@ -1,7 +1,7 @@
 # file สำหรับตรวจคำตอบ
 # ในกรณีที่มีการสร้าง function อื่น ๆ ให้ระบุว่า input-output คืออะไรด้วย
 
-from FRA333_HW3_41_51 import endEffectorJacobianHW3,checkSingularityHW3,computeEffortHW3
+from FRA333_HW3_6541_6551 import endEffectorJacobianHW3,checkSingularityHW3,computeEffortHW3
 from spatialmath import SE3
 from math import pi
 

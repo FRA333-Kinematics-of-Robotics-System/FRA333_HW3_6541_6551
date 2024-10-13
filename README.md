@@ -119,7 +119,7 @@ Where:
 ### Sample Usage
 
 ```python
-from FRA333_HW3_41_51 import endEffectorJacobianHW3, checkSingularityHW3, computeEffortHW3
+from FRA333_HW3_6541_6551 import endEffectorJacobianHW3, checkSingularityHW3, computeEffortHW3
 from math import pi
 
 import numpy as np

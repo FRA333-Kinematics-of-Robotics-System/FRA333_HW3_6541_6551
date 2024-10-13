@@ -15,13 +15,13 @@ Ensure you have the following installed:
 - `roboticstoolbox-python` for validating the results
 - `spatialmath-python` for transformations
 
-### Files Provided
+## Files Provided
 - `HW3_utils.py`: Contains the `FKHW3` function for calculating forward kinematics. This file must be in the same directory as the script.
 - `FRA333_HW3_41_51.py`: Contains the main functions for calculating the Jacobian, checking for singularities, and computing joint efforts.
 - `testScript.py`: Script to verify the correctness of the main functions using Robotics Toolbox for Python.
 - `singularity_finder.py`: A script that detects singular configurations of a 3-degree-of-freedom (3DOF) robot.
 
-### Our Robot
+## Our Robot
 
 ![robot](pictures/pic1.png)  
 
@@ -42,7 +42,7 @@ DHRobot: 3DOF_Robot, 3 joints (RRR), dynamics, modified DH parameters
                                 └────────┴───────┴────────────┴──────┘
 ```
 
-### Functions Overview
+## Functions Overview
 
 1. **`endEffectorJacobianHW3(q: list[float]) -> list[float]`**
 
@@ -135,7 +135,7 @@ print("--------------------<with Effort>--------------------")
 print(computeEffortHW3(q_initial, w))
 ```
 
-### Validation Script
+## Validation Script
 
 The provided `testScript.py` verifies the correctness of the manually calculated Jacobian, singularity check, and effort computation using **Robotics Toolbox for Python**.
 
@@ -352,3 +352,5 @@ robot = rtb.DHRobot(
 
         - Using the `robot.pay()` method from Robotics Toolbox.
         - Using the formula `τ = JT ⋅ w` for comparison with the manual method.
+
+## Notes

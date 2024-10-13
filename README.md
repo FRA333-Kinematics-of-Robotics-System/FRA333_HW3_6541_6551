@@ -144,16 +144,19 @@ The provided `testScript.py` verifies the correctness of the manually calculated
 **`For windows`**:
 
 1. Download [Miniconda](https://docs.anaconda.com/miniconda/miniconda-install/) 
+
 ![minicon1](miniconda_1.png)
 ![minicon2](miniconda_2.png)
 
 2. Install [Miniconda](https://docs.anaconda.com/miniconda/miniconda-install/)
+
 ![minicon3](miniconda_3.png)
 ![minicon4](miniconda_4.png)
 ![minicon5](miniconda_5.png)
 ![minicon6](miniconda_6.png)
 
 3. Run Anaconda Prompt(miniconda3)
+
 ![minicon7](miniconda_7.png)
 
 4. If you install correctly it will show **(base)** infront of your user

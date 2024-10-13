@@ -3,17 +3,17 @@
 This project contains Python functions to calculate the Jacobian matrix of a robot's end-effector, check for singularities, and compute the required joint torques for a given wrench applied to the end-effector. The code relies on a provided utility function `FKHW3` for forward kinematics and uses **Robotics Toolbox for Python** for validation.
 
 ## Team Members
-1. Poppeth Pethchamli
-2. Vasayos Tosiri
+1. [Poppeth Pethchamli](https://github.com/Toonzaza)
+2. [Vasayos Tosiri](https://github.com/TeeTyJunGz)
 
 ## Prerequisites
 
 Ensure you have the following installed:
-- Python 3.x
-- `numpy` library for matrix operations
-- `math` module for handling pi and other mathematical operations
-- `roboticstoolbox-python` for validating the results
-- `spatialmath-python` for transformations
+- **Python 3.x**
+- **numpy** library for matrix operations
+- **math** module for handling pi and other mathematical operations
+- [**roboticstoolbox-python**]((https://petercorke.github.io/robotics-toolbox-python/)) for validating the results
+- **spatialmath-python** for transformations
 
 ## Files Provided
 - `HW3_utils.py`: Contains the `FKHW3` function for calculating forward kinematics. This file must be in the same directory as the script.

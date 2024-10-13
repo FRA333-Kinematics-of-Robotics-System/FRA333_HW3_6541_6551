@@ -19,6 +19,7 @@ Ensure you have the following installed:
 - `HW3_utils.py`: Contains the `FKHW3` function for calculating forward kinematics. This file must be in the same directory as the script.
 - `FRA333_HW3_41_51.py`: Contains the main functions for calculating the Jacobian, checking for singularities, and computing joint efforts.
 - `testScript.py`: Script to verify the correctness of the main functions using Robotics Toolbox for Python.
+- `singularity_finder.py`: A script that detects singular configurations of a 3-degree-of-freedom (3DOF) robot.
 
 ### Our Robot
 
@@ -168,12 +169,36 @@ robot = rtb.DHRobot(
 ### Validation Functions
 
 1. **`CheckJacobian(q: list[float]) -> list[float]`**
-    - **Description**: Uses Robotics Toolbox to calculate the Jacobian matrix for comparison with the manually computed Jacobian.
+
+    - **Input**: 
+        - `q`: A list of joint angles representing the robot's configuration.
+    - **Output**: 
+        - Returns a 6xN Jacobian end-effector matrix from **robotics toolbox**.
+
+    - **Description**: 
+        - Uses Robotics Toolbox to calculate the Jacobian matrix for comparison with the manually computed Jacobian.
     
 2. **`CheckSingularity(q: list[float]) -> bool`**
-    - **Description**: Uses the Jacobian determinant to check for singularities and compares it with the result from the manual method.
+
+    - **Input**: 
+        - `q`: A list of joint angles representing the robot's configuration.
+    - **Output**: 
+        - Returns `True` if the robot is in a singularity configuration, otherwise `False`.
+
+    - **Description**: 
+        - Uses the Jacobian determinant to check for singularities and compares it with the result from the manual method.
 
 3. **`CheackEffort(q: list[float], w: list[float]) -> list[float]`**
-    - **Description**: Computes the joint torques based on a given wrench using two methods:
+
+    - **Input**: 
+        - `q`: A list of joint angles representing the robot's configuration.
+        - `w`: A list of 6 elements representing the wrench (forces and torques) applied at the end-effector.
+    - **Output**: 
+        - Returns a list of joint torques required to resist the applied wrench from both two methods.
+
+    - **Description**: 
+
+        Computes the joint torques based on a given wrench using two methods:
+
         - Using the `robot.pay()` method from Robotics Toolbox.
         - Using the formula `τ = JT ⋅ w` for comparison with the manual method.

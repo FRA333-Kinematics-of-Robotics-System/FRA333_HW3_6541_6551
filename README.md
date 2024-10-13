@@ -366,5 +366,11 @@ robot = rtb.DHRobot(
         - Using the `robot.pay()` method from Robotics Toolbox.
         - Using the formula `τ = JT ⋅ w` for comparison with the manual method.
 
+### Sample Usage
+
+#### Click run in VSCode or use shortcut **ctrl + F10**
+
+![run_test](pictures/run_test.png)
+
 ## Notes
 This project is one of FRA333 Kinematics of Robotics System HW.

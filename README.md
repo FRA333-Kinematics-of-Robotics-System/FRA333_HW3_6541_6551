@@ -24,16 +24,21 @@ Ensure you have the following installed:
 
 ![robot](pic1.png)
 
-DHRobot: 3DOF_Robot, 3 joints (RRR), dynamics, modified DH parameters
+This is our Robot MDH parameters.
+- **d_1** = 0.0892 
+
+- **a_2** = 0.425
 
 ```bash
-                                ┌────────┬───────┬────────────┬────────┐
-                                │  aⱼ₋₁  │ ⍺ⱼ₋₁  │     θⱼ     │   dⱼ   │
-                                ├────────┼───────┼────────────┼────────┤
-                                │    0.0 │  0.0° │  q1 + 180° │ 0.0892 │
-                                │    0.0 │ 90.0° │         q2 │    0.0 │
-                                │ -0.425 │  0.0° │         q3 │    0.0 │
-                                └────────┴───────┴────────────┴────────┘
+DHRobot: 3DOF_Robot, 3 joints (RRR), dynamics, modified DH parameters
+
+                                ┌────────┬───────┬────────────┬──────┐
+                                │  aⱼ₋₁  │ ⍺ⱼ₋₁  │     θⱼ     │  dⱼ  │
+                                ├────────┼───────┼────────────┼──────┤
+                                │   0.0  │  0.0° │  q1 + 180° │  d_1 │
+                                │   0.0  │ 90.0° │         q2 │  0.0 │
+                                │  -a_2  │  0.0° │         q3 │  0.0 │
+                                └────────┴───────┴────────────┴──────┘
 ```
 
 ### Functions Overview
@@ -130,7 +135,8 @@ print(computeEffortHW3(q_initial, w))
 The provided `testScript.py` verifies the correctness of the manually calculated Jacobian, singularity check, and effort computation using **Robotics Toolbox for Python**.
 ### Robot's MDH Parameters Define for **Robotics Toolbox**
 
-```py
+```python
+#This parameters from HW3_utils.py file.
 d_1 = 0.0892
 a_2 = 0.425
 a_3 = 0.39243

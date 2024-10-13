@@ -58,7 +58,7 @@ DHRobot: 3DOF_Robot, 3 joints (RRR), dynamics, modified DH parameters
 
         The Jacobian matrix $J$ can be expressed as:
 
-## $$ J = \begin{bmatrix} J_v \\\ J_w \end{bmatrix} $$
+### $$ J = \begin{bmatrix} J_v \\\ J_w \end{bmatrix} $$
 
 
 2. **`checkSingularityHW3(q: list[float]) -> bool`**

@@ -23,7 +23,7 @@ Ensure you have the following installed:
 
 ### Our Robot
 
-![robot](pic1.png)
+![robot](pictures/pic1.png)  
 
 This is our Robot MDH parameters.
 - **d_1** = 0.0892 
@@ -145,19 +145,19 @@ The provided `testScript.py` verifies the correctness of the manually calculated
 
 1. Download [Miniconda](https://docs.anaconda.com/miniconda/miniconda-install/) 
 
-![minicon1](miniconda_1.png)
-![minicon2](miniconda_2.png)
+![minicon1](pictures/miniconda_1.png)
+![minicon2](pictures/miniconda_2.png)
 
 2. Install [Miniconda](https://docs.anaconda.com/miniconda/miniconda-install/)
 
-![minicon3](miniconda_3.png)
-![minicon4](miniconda_4.png)
-![minicon5](miniconda_5.png)
-![minicon6](miniconda_6.png)
+![minicon3](pictures/miniconda_3.png)
+![minicon4](pictures/miniconda_4.png)
+![minicon5](pictures/miniconda_5.png)
+![minicon6](pictures/miniconda_6.png)
 
 3. Run Anaconda Prompt(miniconda3)
 
-![minicon7](miniconda_7.png)
+![minicon7](pictures/miniconda_7.png)
 
 4. If you install correctly it will show **(base)** infront of your user
 
@@ -290,7 +290,7 @@ The provided `testScript.py` verifies the correctness of the manually calculated
 
 ### Robot's MDH Parameters Define for **Robotics Toolbox**
 
-![robottoolbox](all_dim_robot.png)
+![robottoolbox](pictures/all_dim_robot.png)
 
 ```python
 #This parameters from HW3_utils.py file.

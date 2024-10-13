@@ -98,7 +98,10 @@ Where:
 
     - **Input**: 
         - `q`: A list of joint angles representing the robot's configuration.
-        - `w`: A list of 6 elements representing the wrench (forces and torques) applied at the end-effector.
+        - `w`: A list of 6 elements representing the wrench (forces and torques) applied at the end-effector. In this form only.
+        ```python
+        w = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] #(Fx, Fy, Fz, Tx, Ty, Tz)
+        ```
     - **Output**: 
         - Returns a list of joint torques required to resist the applied wrench.
     
@@ -355,7 +358,10 @@ robot = rtb.DHRobot(
 
     - **Input**: 
         - `q`: A list of joint angles representing the robot's configuration.
-        - `w`: A list of 6 elements representing the wrench (forces and torques) applied at the end-effector.
+        - `w`: A list of 6 elements representing the wrench (forces and torques) applied at the end-effector. In this form only.
+        ```python
+        w = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] #(Fx, Fy, Fz, Tx, Ty, Tz)
+        ```
     - **Output**: 
         - Returns a list of joint torques required to resist the applied wrench from both two methods.
 

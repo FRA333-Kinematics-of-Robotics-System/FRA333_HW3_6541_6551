@@ -12,7 +12,7 @@ Ensure you have the following installed:
 - **Python 3.x**
 - **numpy** library for matrix operations
 - **math** module for handling pi and other mathematical operations
-- [**roboticstoolbox-python**]((https://petercorke.github.io/robotics-toolbox-python/)) for validating the results
+- [**roboticstoolbox-python**](https://petercorke.github.io/robotics-toolbox-python/) for validating the results
 - **spatialmath-python** for transformations
 
 ## Files Provided

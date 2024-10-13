@@ -367,3 +367,4 @@ robot = rtb.DHRobot(
         - Using the formula `τ = JT ⋅ w` for comparison with the manual method.
 
 ## Notes
+This project is one of FRA333 Kinematics of Robotics System HW.
